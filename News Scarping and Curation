@@ -2,7 +2,7 @@
 from newspaper import Article 
 import nltk
 
-#Download Punkt Sentence Tokenizer
+#Download punkt Sentence Tokenizer
 nltk.download('punkt')
 
 #Pass the URL of news article here
