@@ -1,0 +1,30 @@
+#Import Libraries; make sure to "pip install newspaper3k" befor importing
+from newspaper import Article 
+import nltk
+
+#Download Punkt Sentence Tokenizer
+nltk.download('punkt')
+
+#Pass the URL of news article here
+url = 'https://timesofindia.indiatimes.com/business/india-business/air-india-express-flight-with-190-on-board-suffers-tail-strike-while-landing-all-safe/articleshow/70021392.cms'
+
+#Set the language
+article = Article(url, language="en") # en for English 
+
+#Download, parse and perform NLP on the news article
+article.download() 
+article.parse() 
+article.nlp() 
+
+#Printing
+print("Article Title:") 
+print(article.title) 
+print("\n") 
+print("Article Text:") 
+print(article.text) 
+print("\n") 
+print("Article Summary:") 
+print(article.summary) 
+print("\n") 
+print("Article Keywords:") 
+print(article.keywords) 
